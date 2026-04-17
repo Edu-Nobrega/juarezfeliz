@@ -2,67 +2,72 @@
 <div class="post-content">
   <h1>Autor Declamando</h1>
   <p class="declamadas-intro">Aqui você encontra poesias na voz original do autor. Ouça Juarez de Oliveira declamar suas próprias criações — com a cadência, a emoção e o sotaque mineiro de quem as viveu.</p>
-
   <div class="audio-list">
-    {{ $poemas := slice
-      "01_Imagens" "02_O_Mundo" "03_Rotina_Paulistana" "04_Mulher" "05_São_Paulo"
-      "06_Moça_na_Janela" "07_Rosa" "08_Vento_Mineiro" "09_O_Negro" "10_Rede_Amarela"
-      "11_Maria_Rosa" "12_Pássaros_e_Homens" "13_Noite_dos_Negros" "14_No_Baile"
-      "15_Meninos_de_Espera_Feliz" "16_Chegados_do_Norte" "17_Sete_Moças"
-      "18_Impaciência_Paterna" "19_Cora_Coralina" "20_Chegança"
-      "21_Américo_Antônio_Amorim" "22_Despedida" "23_Lavadeiras"
-      "24_Eu_também_já_fui_mais_moço" "25_Néctar_dos_Deuses" "26_Helena_Noronha"
-      "27_Moça_Morena" "28_Medo_que_Tortura" "29_José_Bernardes_da_Veiga"
-      "30_Vida_Operária" "31_Fraternal_Abraço" "32_Poesia_Inútil" "33_Confissões"
-      "34_Graça_Maior" "35_Fuga" "36_O_camponês" "37_O_grande_passeio"
-      "38_Centenário_Drumond" "39_Retratos_de_Minas" "40_O_direito"
-      "41_Glória_Efêmera" "42_Pássaro_Branco" "43_Goiabas_Brancas" "44_Soneto"
-      "45_Manuel_Gonçalves" "46_Somente_ela" "47_Minha_grande_amiga"
-      "48_Retrato_do_Brasil" "49_Meus_versos" "50_Rua_das_viúvas"
-      "51_Visão_das_águas" "52_Meninos_da_rua_nova" "53_Voz_do_sino"
-      "54_Ao_longo_da_noite" "55_O_mineiro" "56_Casa_de_fazenda"
-      "57_Paulo_Bonfim" "58_Concerto_Final"
-    }}
-
-    {{ range $poemas }}
-    {{ $titulo := . | replaceRE "^[0-9]+_" "" | replaceRE "_" " " }}
-    {{ $arquivo := printf "/audio/%s.mp3" . }}
-    <div class="audio-item">
-      <div class="audio-titulo">{{ $titulo }}</div>
-      <audio controls preload="none">
-        <source src="{{ $arquivo }}" type="audio/mpeg">
-      </audio>
-    </div>
-    {{ end }}
+    <div class="audio-item"><div class="audio-titulo">Imagens</div><audio controls preload="none"><source src="/audio/01_Imagens.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">O Mundo</div><audio controls preload="none"><source src="/audio/02_O_Mundo.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Rotina Paulistana</div><audio controls preload="none"><source src="/audio/03_Rotina_Paulistana.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Mulher</div><audio controls preload="none"><source src="/audio/04_Mulher.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">São Paulo</div><audio controls preload="none"><source src="/audio/05_São_Paulo.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Moça na Janela</div><audio controls preload="none"><source src="/audio/06_Moça_na_Janela.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Rosa</div><audio controls preload="none"><source src="/audio/07_Rosa.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Vento Mineiro</div><audio controls preload="none"><source src="/audio/08_Vento_Mineiro.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">O Negro</div><audio controls preload="none"><source src="/audio/09_O_Negro.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Rede Amarela</div><audio controls preload="none"><source src="/audio/10_Rede_Amarela.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Maria Rosa</div><audio controls preload="none"><source src="/audio/11_Maria_Rosa.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Pássaros e Homens</div><audio controls preload="none"><source src="/audio/12_Pássaros_e_Homens.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Noite dos Negros</div><audio controls preload="none"><source src="/audio/13_Noite_dos_Negros.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">No Baile</div><audio controls preload="none"><source src="/audio/14_No_Baile.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Meninos de Espera Feliz</div><audio controls preload="none"><source src="/audio/15_Meninos_de_Espera_Feliz.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Chegados do Norte</div><audio controls preload="none"><source src="/audio/16_Chegados_do_Norte.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Sete Moças</div><audio controls preload="none"><source src="/audio/17_Sete_Moças.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Impaciência Paterna</div><audio controls preload="none"><source src="/audio/18_Impaciência_Paterna.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Cora Coralina</div><audio controls preload="none"><source src="/audio/19_Cora_Coralina.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Chegança</div><audio controls preload="none"><source src="/audio/20_Chegança.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Américo Antônio Amorim</div><audio controls preload="none"><source src="/audio/21_Américo_Antônio_Amorim.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Despedida</div><audio controls preload="none"><source src="/audio/22_Despedida.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Lavadeiras</div><audio controls preload="none"><source src="/audio/23_Lavadeiras.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Eu também já fui mais moço</div><audio controls preload="none"><source src="/audio/24_Eu_também_já_fui_mais_moço.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Néctar dos Deuses</div><audio controls preload="none"><source src="/audio/25_Néctar_dos_Deuses.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Helena Noronha</div><audio controls preload="none"><source src="/audio/26_Helena_Noronha.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Moça Morena</div><audio controls preload="none"><source src="/audio/27_Moça_Morena.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Medo que Tortura</div><audio controls preload="none"><source src="/audio/28_Medo_que_Tortura.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">José Bernardes da Veiga</div><audio controls preload="none"><source src="/audio/29_José_Bernardes_da_Veiga.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Vida Operária</div><audio controls preload="none"><source src="/audio/30_Vida_Operária.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Fraternal Abraço</div><audio controls preload="none"><source src="/audio/31_Fraternal_Abraço.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Poesia Inútil</div><audio controls preload="none"><source src="/audio/32_Poesia_Inútil.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Confissões</div><audio controls preload="none"><source src="/audio/33_Confissões.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Graça Maior</div><audio controls preload="none"><source src="/audio/34_Graça_Maior.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Fuga</div><audio controls preload="none"><source src="/audio/35_Fuga.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">O Camponês</div><audio controls preload="none"><source src="/audio/36_O_camponês.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">O Grande Passeio</div><audio controls preload="none"><source src="/audio/37_O_grande_passeio.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Centenário Drummond</div><audio controls preload="none"><source src="/audio/38_Centenário_Drumond.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Retratos de Minas</div><audio controls preload="none"><source src="/audio/39_Retratos_de_Minas.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">O Direito</div><audio controls preload="none"><source src="/audio/40_O_direito.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Glória Efêmera</div><audio controls preload="none"><source src="/audio/41_Glória_Efêmera.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Pássaro Branco</div><audio controls preload="none"><source src="/audio/42_Pássaro_Branco.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Goiabas Brancas</div><audio controls preload="none"><source src="/audio/43_Goiabas_Brancas.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Soneto</div><audio controls preload="none"><source src="/audio/44_Soneto.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Manuel Gonçalves</div><audio controls preload="none"><source src="/audio/45_Manuel_Gonçalves.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Somente Ela</div><audio controls preload="none"><source src="/audio/46_Somente_ela.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Minha Grande Amiga</div><audio controls preload="none"><source src="/audio/47_Minha_grande_amiga.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Retrato do Brasil</div><audio controls preload="none"><source src="/audio/48_Retrato_do_Brasil.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Meus Versos</div><audio controls preload="none"><source src="/audio/49_Meus_versos.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Rua das Viúvas</div><audio controls preload="none"><source src="/audio/50_Rua_das_viúvas.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Visão das Águas</div><audio controls preload="none"><source src="/audio/51_Visão_das_águas.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Meninos da Rua Nova</div><audio controls preload="none"><source src="/audio/52_Meninos_da_rua_nova.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Voz do Sino</div><audio controls preload="none"><source src="/audio/53_Voz_do_sino.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Ao Longo da Noite</div><audio controls preload="none"><source src="/audio/54_Ao_longo_da_noite.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">O Mineiro</div><audio controls preload="none"><source src="/audio/55_O_mineiro.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Casa de Fazenda</div><audio controls preload="none"><source src="/audio/56_Casa_de_fazenda.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Paulo Bonfim</div><audio controls preload="none"><source src="/audio/57_Paulo_Bonfim.mp3" type="audio/mpeg"></audio></div>
+    <div class="audio-item"><div class="audio-titulo">Concerto Final</div><audio controls preload="none"><source src="/audio/58_Concerto_Final.mp3" type="audio/mpeg"></audio></div>
   </div>
 </div>
-
 <style>
-.declamadas-intro {
-  font-style: italic;
-  color: #7a7060;
-  line-height: 1.8;
-  border-left: 3px solid #e0dbd0;
-  padding-left: 1rem;
-  margin-bottom: 2rem;
-}
+.declamadas-intro { font-style: italic; color: #7a7060; line-height: 1.8; border-left: 3px solid #e0dbd0; padding-left: 1rem; margin-bottom: 2rem; }
 .audio-list { display: flex; flex-direction: column; gap: 12px; }
-.audio-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 12px 16px;
-  background: #fff;
-  border: 1px solid #e0dbd0;
-  border-radius: 6px;
-}
-.audio-titulo {
-  font-size: 15px;
-  color: #1a1a1a;
-  min-width: 200px;
-}
+.audio-item { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding: 12px 16px; background: #fff; border: 1px solid #e0dbd0; border-radius: 6px; }
+.audio-titulo { font-size: 15px; color: #1a1a1a; min-width: 200px; }
 audio { height: 36px; flex: 1; min-width: 200px; }
 </style>
 {{ end }}
