@@ -1,0 +1,39 @@
+{{ define "main" }}
+<div class="post-content">
+  <h1>Letras</h1>
+  <p class="letras-intro">Esta seção reúne letras de música de autoria de Juarez de Oliveira — composições que atravessam décadas e estilos, do samba ao modão, do forró à canção poética, sempre com a marca inconfundível do olhar mineiro sobre a vida.</p>
+
+  <div class="letras-lista">
+    {{ range (where .Site.RegularPages "Section" "letras") }}
+    <div class="letra-card">
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <p class="letra-excerpt">{{ .Summary }}</p>
+      <a class="ler-link" href="{{ .Permalink }}">Ler →</a>
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+<style>
+.letras-intro {
+  font-style: italic;
+  color: #7a7060;
+  line-height: 1.8;
+  border-left: 3px solid #e0dbd0;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+.letras-lista { display: flex; flex-direction: column; gap: 1.5rem; }
+.letra-card {
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid #e0dbd0;
+  border-radius: 6px;
+}
+.letra-card h2 { margin: 0 0 0.5rem; font-size: 20px; }
+.letra-card h2 a { text-decoration: none; color: #1a1a1a; }
+.letra-card h2 a:hover { color: #7a7060; }
+.letra-excerpt { color: #7a7060; font-style: italic; margin: 0 0 0.8rem; }
+.ler-link { font-size: 12px; text-transform: uppercase; letter-spacing: 0.07em; color: #a09880; text-decoration: none; }
+</style>
+{{ end }}

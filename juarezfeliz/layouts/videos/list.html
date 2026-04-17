@@ -1,0 +1,78 @@
+{{ define "main" }}
+<div class="post-content">
+  <h1>Vídeos</h1>
+  <p style="font-style:italic;color:#7a7060;margin-bottom:2rem">Assista às músicas e composições de Juarez de Oliveira no YouTube.</p>
+
+  <div class="videos-grid">
+    {{ $videos := slice
+      (dict "id" "AG-E_HwZdIY" "title" "Galo Bravo")
+      (dict "id" "8ElgEX5tTk0" "title" "Pipocou o Zé")
+      (dict "id" "EhLG5U--SxM" "title" "Samba Canção para Ela")
+      (dict "id" "qXdwHbGhu_Q" "title" "O Barbeiro e o Rádio")
+      (dict "id" "EzuzKhXXg_Q" "title" "Preciso Largar a Boemia")
+      (dict "id" "tLLPPiiIVO4" "title" "A Namorada Freira")
+      (dict "id" "NBQwgFEL_Fc" "title" "Futebol e Carteado no Regatas")
+      (dict "id" "FankQS2Hbtg" "title" "Reencontro Dançante")
+      (dict "id" "ic6HnOFsimQ" "title" "I Pray, I Feel Blessed")
+      (dict "id" "A9oxAvE845s" "title" "Forró da Imaginação")
+      (dict "id" "RMx5L27Vkc8" "title" "Conversa de Amor")
+      (dict "id" "bjeUj5ya-i0" "title" "Ela e Eu")
+      (dict "id" "hCXsHdPRvJg" "title" "Mudando de Vida")
+      (dict "id" "hUTK2RrXrJ8" "title" "Conselho Amigo")
+      (dict "id" "KMvF8zJqI5E" "title" "ITAPOÃ")
+      (dict "id" "Z_UI_X_JZ1s" "title" "Viva a Vida")
+      (dict "id" "OBr3LQA1wak" "title" "O Passado em Espera Feliz")
+      (dict "id" "sK412zxIAiw" "title" "Minha Chacrinha")
+      (dict "id" "oFkshhNxtbw" "title" "Cornélio Pires")
+      (dict "id" "nB1WUIIU-yQ" "title" "Tributo a James Milanelo")
+      (dict "id" "bZRXjhrTLnw" "title" "Saudades da Minha Terra e da Minha Gente")
+      (dict "id" "-8Q1pdIQ34A" "title" "Na Estrada")
+      (dict "id" "uSVlXDWoon0" "title" "Compositor Mineiro")
+      (dict "id" "Kv6HgoC3eDw" "title" "Roda de Samba no Morro")
+      (dict "id" "ATgqd-dSk4U" "title" "Piripimpim")
+      (dict "id" "fvWfdlquRIE" "title" "SoloTu")
+      (dict "id" "lfi0CMm5TIQ" "title" "MORREU JOCA")
+      (dict "id" "S6n16mEwY9w" "title" "Poeta sem Poesia")
+      (dict "id" "vNyXR_wFkoI" "title" "Lembrando o Passado")
+    }}
+
+    {{ range $videos }}
+    <a class="video-card" href="https://www.youtube.com/watch?v={{ .id }}" target="_blank" rel="noopener">
+      <img src="https://img.youtube.com/vi/{{ .id }}/hqdefault.jpg" alt="{{ .title }}" loading="lazy">
+      <span>{{ .title }}</span>
+    </a>
+    {{ end }}
+  </div>
+</div>
+
+<style>
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 1.5rem;
+}
+.video-card {
+  display: block;
+  text-decoration: none;
+  border: 1px solid #e0dbd0;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.video-card:hover { border-color: #b5ae9f; }
+.video-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+}
+.video-card span {
+  display: block;
+  padding: 8px 10px;
+  font-size: 13px;
+  color: #4a4540;
+  line-height: 1.4;
+}
+</style>
+{{ end }}

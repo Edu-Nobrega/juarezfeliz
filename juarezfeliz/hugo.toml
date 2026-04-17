@@ -1,0 +1,65 @@
+baseURL = "https://juarezfeliz.com.br/"
+languageCode = "pt-br"
+title = "Juarez de Oliveira — o Esperafelicense"
+theme = "PaperMod"
+paginate = 20
+
+[params]
+  author = "Juarez de Oliveira"
+  description = "Site oficial de Juarez de Oliveira — poeta, letrista e escritor mineiro"
+  defaultTheme = "light"
+  ShowReadingTime = false
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = false
+  ShowCodeCopyButtons = false
+  hideMeta = false
+  homeInfoParams = true
+
+  [params.homeInfoParams]
+    Title = "Juarez de Oliveira"
+    Content = "De origem humilde, nascido em **Espera Feliz**, Minas Gerais. Editor jurídico, poeta, letrista e escritor. Membro da União Brasileira de Escritores — SP. Autor do Hino de Espera Feliz e do Hino de Tietê."
+
+  [params.profileMode]
+    enabled = true
+    title = "Juarez de Oliveira"
+    subtitle = "*o Esperafelicense*"
+    imageUrl = "/images/juarez-perfil.png"
+    imageTitle = "Juarez de Oliveira"
+    imageWidth = 160
+    imageHeight = 160
+
+  [[params.socialIcons]]
+    name = "youtube"
+    url = "https://www.youtube.com/@juarezdeoliveira9090"
+
+[menu]
+  [[menu.main]]
+    name = "Início"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Sobre"
+    url = "/sobre/"
+    weight = 2
+  [[menu.main]]
+    name = "Contos e Poesias"
+    url = "/contos-e-poesias/"
+    weight = 3
+  [[menu.main]]
+    name = "Letras"
+    url = "/letras/"
+    weight = 4
+  [[menu.main]]
+    name = "Vídeos"
+    url = "/videos/"
+    weight = 5
+  [[menu.main]]
+    name = "Autor Declamando"
+    url = "/declamadas/"
+    weight = 6
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

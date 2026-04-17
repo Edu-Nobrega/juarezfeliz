@@ -1,0 +1,7 @@
+{
+  "build": {
+    "command": "hugo --minify",
+    "output": "public"
+  },
+  "framework": "hugo"
+}

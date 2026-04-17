@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;1,400&display=swap');
+
+:root {
+  --font-serif: 'Lora', Georgia, serif;
+  --font-display: 'Playfair Display', serif;
+  --color-bg: #faf8f3;
+  --color-text: #1a1a1a;
+  --color-muted: #7a7060;
+  --color-border: #e0dbd0;
+}
+
+body {
+  font-family: var(--font-serif) !important;
+  background-color: var(--color-bg) !important;
+}
+
+.post-title, h1, h2, h3 {
+  font-family: var(--font-display) !important;
+}
+
+.site-name {
+  font-family: var(--font-display) !important;
+  font-size: 20px !important;
+}
+
+.profile-mode .profile_inner h1 {
+  font-family: var(--font-display) !important;
+  font-size: 32px !important;
+}
+
+.profile-mode .profile_inner p {
+  font-family: var(--font-serif) !important;
+  font-style: italic;
+  color: var(--color-muted);
+}
+
+.profile-mode img {
+  border-radius: 50% !important;
+  border: 3px solid var(--color-border) !important;
+}
+
+.post-content {
+  font-family: var(--font-serif) !important;
+  line-height: 1.9 !important;
+  font-size: 16px !important;
+}
+
+.post-content p {
+  margin-bottom: 1.4rem;
+}
+
+nav a {
+  font-size: 13px !important;
+  letter-spacing: 0.05em !important;
+}

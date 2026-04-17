@@ -1,0 +1,80 @@
+{{ define "main" }}
+<div class="post-content">
+  <h1>Contos e Poesias</h1>
+
+  {{ $contos := where (where .Site.RegularPages "Section" "contos-e-poesias") ".Params.tipo" "conto" }}
+  {{ $poesias := where (where .Site.RegularPages "Section" "contos-e-poesias") ".Params.tipo" "poesia" }}
+
+  {{ if $contos }}
+  <h2 class="subsecao">Contos</h2>
+  <div class="cards-grid">
+    {{ range $contos }}
+    <a class="card" href="{{ .Permalink }}">
+      {{ if .Params.cover }}
+      <div class="card-img" style="background-image: url('{{ .Params.cover.image }}')"></div>
+      {{ else }}
+      <div class="card-img card-img-placeholder"></div>
+      {{ end }}
+      <div class="card-body">
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Summary }}</p>
+        <span class="ler">Ler →</span>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <h2 class="subsecao">Poesias</h2>
+  <div class="cards-grid">
+    {{ range $poesias }}
+    <a class="card" href="{{ .Permalink }}">
+      {{ if .Params.cover }}
+      <div class="card-img" style="background-image: url('{{ .Params.cover.image }}')"></div>
+      {{ else }}
+      <div class="card-img card-img-placeholder"></div>
+      {{ end }}
+      <div class="card-body">
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Summary }}</p>
+        <span class="ler">Ler →</span>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</div>
+
+<style>
+.subsecao {
+  font-size: 22px;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e0dbd0;
+}
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+.card {
+  display: block;
+  text-decoration: none;
+  background: #fff;
+  border: 1px solid #e0dbd0;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.card:hover { border-color: #b5ae9f; }
+.card-img {
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+}
+.card-img-placeholder { background-color: #ede9df; }
+.card-body { padding: 14px 16px; }
+.card-body h3 { margin: 0 0 6px; font-size: 17px; color: #1a1a1a; }
+.card-body p { margin: 0 0 10px; font-size: 13px; color: #7a7060; font-style: italic; line-height: 1.6; }
+.ler { font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: #a09880; }
+</style>
+{{ end }}
